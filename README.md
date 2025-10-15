@@ -15,6 +15,7 @@
 
 > ![Figure 1](method.png)
 *(a) Structures of our robust diffusion model: a lightweight prediction head that predicts pseudo conditions $\hat{y}$ is added at the output of the U-Net encoder of the diffusion model, and temporal ensembling is then adopted to update pseudo conditions. (b) Learning dynamics of conditional diffusion models on CIFAR-10 under $40\%$ symmetric noise. Y-axis: controllability (Top-1 ACC of generated images, 1k images/class, 10 classes); X-axis: training epochs. Generations are evaluated using a pretrained CIFAR-10 classifier (Top-1 ACC $92.89\%$, silver dash-dot line). We compare the pseudo condition (PC) in orange curve and PC with Reverse-time Diffusion Condition (RDC) in green curve, both with early stopping (star markers), against TDSM in blue and the vanilla conditional diffusion in gray curve.*
+<br>
 
 >
 > **Abstract**  
@@ -31,7 +32,7 @@ Experimentally, our approach achieves state-of-the-art performance across a rang
 
 
 
-This repository contains code both for **Image Generation** and **Visuomotor Policy Generation**.
+This repository contains code both for **Label-conditioned Image Generation** and **Image-conditioned Visuomotor Policy Generation**.
 
 ## Requirements
 - Linux platform
@@ -120,9 +121,10 @@ python eval.py --checkpoint=run_dir/train_0/latest.ckpt --output_dir=data/pusht_
 ## Bibtex
 
 ```bibtex
-@inproceedings{key,
-  title     = {Paper Title},
-  author    = {Author Name},
-  booktitle = {Conference},
-  year      = {2025}
+@inproceedings{chen2025robustlearningdiffusionmodels,
+  title     = {Robust Learning of Diffusion Models with Extremely Noisy Conditions},
+  author    = {Xin Chen, Gillian Dobbie, Xinyu Wang, Feng Liu, Di Wang, Jingfeng Zhang},
+  journal   = {arxiv},
+  year      = {2025},
+  url       = {https://arxiv.org/abs/2510.10149}
 }
